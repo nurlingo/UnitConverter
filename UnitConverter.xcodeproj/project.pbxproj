@@ -14,9 +14,12 @@
 		5CB6140E238DACBF00275132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CB6140D238DACBF00275132 /* Assets.xcassets */; };
 		5CB61411238DACBF00275132 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB6140F238DACBF00275132 /* LaunchScreen.storyboard */; };
 		5CB61414238DACBF00275132 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB61413238DACBF00275132 /* main.m */; };
+		9D9A3F506E3C55D34F6463B5 /* Pods_UnitConverter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBE819650F4083080FDA384 /* Pods_UnitConverter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1461F18550C1167708687AF8 /* Pods-UnitConverter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitConverter.release.xcconfig"; path = "Target Support Files/Pods-UnitConverter/Pods-UnitConverter.release.xcconfig"; sourceTree = "<group>"; };
+		1CA80D8A6279D6DC0DE85852 /* Pods-UnitConverter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitConverter.debug.xcconfig"; path = "Target Support Files/Pods-UnitConverter/Pods-UnitConverter.debug.xcconfig"; sourceTree = "<group>"; };
 		5CB613FE238DACBD00275132 /* UnitConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CB61401238DACBD00275132 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5CB61402238DACBD00275132 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +32,7 @@
 		5CB61410238DACBF00275132 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CB61412238DACBF00275132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CB61413238DACBF00275132 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AFBE819650F4083080FDA384 /* Pods_UnitConverter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitConverter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D9A3F506E3C55D34F6463B5 /* Pods_UnitConverter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +52,8 @@
 			children = (
 				5CB61400238DACBD00275132 /* UnitConverter */,
 				5CB613FF238DACBD00275132 /* Products */,
+				B5D3F013308574448083DEB4 /* Pods */,
+				9B5CB0727CFE0A67E75366D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +83,24 @@
 			path = UnitConverter;
 			sourceTree = "<group>";
 		};
+		9B5CB0727CFE0A67E75366D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFBE819650F4083080FDA384 /* Pods_UnitConverter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5D3F013308574448083DEB4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1CA80D8A6279D6DC0DE85852 /* Pods-UnitConverter.debug.xcconfig */,
+				1461F18550C1167708687AF8 /* Pods-UnitConverter.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5CB61417238DACBF00275132 /* Build configuration list for PBXNativeTarget "UnitConverter" */;
 			buildPhases = (
+				30187EAE841DBEAA7F85C3D2 /* [CP] Check Pods Manifest.lock */,
 				5CB613FA238DACBD00275132 /* Sources */,
 				5CB613FB238DACBD00275132 /* Frameworks */,
 				5CB613FC238DACBD00275132 /* Resources */,
+				33829A7A5DBC6B24CF2CB26D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +167,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30187EAE841DBEAA7F85C3D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UnitConverter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33829A7A5DBC6B24CF2CB26D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnitConverter/Pods-UnitConverter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnitConverter/Pods-UnitConverter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnitConverter/Pods-UnitConverter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5CB613FA238DACBD00275132 /* Sources */ = {
@@ -287,6 +356,7 @@
 		};
 		5CB61418238DACBF00275132 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CA80D8A6279D6DC0DE85852 /* Pods-UnitConverter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +374,7 @@
 		};
 		5CB61419238DACBF00275132 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1461F18550C1167708687AF8 /* Pods-UnitConverter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

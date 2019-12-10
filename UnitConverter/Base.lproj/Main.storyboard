@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,65 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your amount in U.S. dollars" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6al-1T-97a">
+                                <rect key="frame" x="10" y="126.5" width="300" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpl-at-0Rp">
+                                <rect key="frame" x="97" y="255.5" width="126" height="57"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="Convert"/>
+                                <connections>
+                                    <action selector="convertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8En-nb-3TQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose unit and tap convert" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNU-XW-WnQ">
+                                <rect key="frame" x="16" y="320.5" width="288" height="88.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="REi-ZX-odk">
+                                <rect key="frame" x="10" y="184.5" width="300" height="32"/>
+                                <segments>
+                                    <segment title="Euro"/>
+                                    <segment title="British Pound"/>
+                                    <segment title="Japanese Yen"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6al-1T-97a" firstAttribute="leading" secondItem="REi-ZX-odk" secondAttribute="leading" id="FAQ-Ac-Oir"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="REi-ZX-odk" secondAttribute="trailing" constant="10" id="Qmk-Jx-gX0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="uNU-XW-WnQ" secondAttribute="leading" constant="-16" id="Xiq-Iy-M4y"/>
+                            <constraint firstItem="vpl-at-0Rp" firstAttribute="top" secondItem="REi-ZX-odk" secondAttribute="bottom" constant="40" id="f4g-2u-yRV"/>
+                            <constraint firstItem="uNU-XW-WnQ" firstAttribute="top" secondItem="vpl-at-0Rp" secondAttribute="bottom" constant="8" id="fUM-ZD-ead"/>
+                            <constraint firstItem="REi-ZX-odk" firstAttribute="top" secondItem="6al-1T-97a" secondAttribute="bottom" constant="24" id="sWX-xb-ihF"/>
+                            <constraint firstItem="REi-ZX-odk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ul8-5j-XmB"/>
+                            <constraint firstItem="uNU-XW-WnQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="uxj-Ih-ild"/>
+                            <constraint firstItem="vpl-at-0Rp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="viF-26-RcG"/>
+                            <constraint firstItem="6al-1T-97a" firstAttribute="trailing" secondItem="REi-ZX-odk" secondAttribute="trailing" id="zFH-F8-QVz"/>
+                            <constraint firstItem="vpl-at-0Rp" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="zVG-xF-dYr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="convertButton" destination="vpl-at-0Rp" id="2Cv-Qc-hVb"/>
+                        <outlet property="inputTextField" destination="6al-1T-97a" id="dp0-RA-ESx"/>
+                        <outlet property="outputLabel" destination="uNU-XW-WnQ" id="rPJ-fX-cvl"/>
+                        <outlet property="segmentController" destination="REi-ZX-odk" id="qCA-5m-eac"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
 </document>
